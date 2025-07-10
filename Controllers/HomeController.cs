@@ -47,9 +47,10 @@ public class HomeController : Controller
             return View();
         }
     }
-    public IActionResult AgregarComidas(string Nombre, int IdTipoComida, double Precio, bool SinGluten)
+    public IActionResult AgregarComida(string Nombre, int IdTipoComida, double Precio, bool SinGluten)
     {
         Comidas coco = new Comidas(Nombre, IdTipoComida, Precio, SinGluten);
         BD.AgregarComidas(coco);
+        return RedirectToAction("Index");
     }
 }

@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\49091683\Downloads\Conexi-n-a-SQL-Server
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/49091683/Downloads/Conexi-n-a-SQL-Server/Views/Home/AgregarComidas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZ3JlZ2FyQ29taWRhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/49091683/Downloads/Conexi-n-a-SQL-Server/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

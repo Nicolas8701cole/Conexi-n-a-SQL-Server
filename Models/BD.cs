@@ -3,8 +3,10 @@ using Dapper;
 
 public static class BD
 {
-    private static string _connectionString = @"Server=localhost;DataBase=NombreBase;Integrated Security=True;TrustServerCertificate =True;";
-    public static List<Clientes> LevantarMesas()
+    
+    private static string _connectionString = @"Server=localhost;DataBase=TP07 -ORT Gourmet;Integrated Security=True;TrustServerCertificate=True;";
+    
+        public static List<Clientes> LevantarMesas()
     {
         List<Clientes> clientes = new List<Clientes>();
         using (SqlConnection connection = new SqlConnection(_connectionString))

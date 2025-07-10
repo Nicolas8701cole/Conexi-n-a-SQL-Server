@@ -1,8 +1,27 @@
-﻿@{
-    ViewData["Title"] = "Index";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
 
-<div>
-    <h1>Index</h1>
-    <p>Bienvenidos al sitio web de NombreProyecto</p>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuarto papyrus te habla</title>
+</head>
+
+<body>
+
+    <main>
+        <form asp-controller="Home" asp-action="AdministrarMovimientosEntrePestañas" method="post" autocomplete="false" tabindex="-1">
+            <p>
+                Opciones <br>
+                <input type="checkbox" name="eleccion" value=1>Listar a todos los Clientes <br>
+                <input type="checkbox" name="eleccion" value=2>Eliminar Clientes<br>
+                <input type="checkbox" name="eleccion" value=3>Modificar datos de los Mozos<br>
+                <input type="checkbox" name="eleccion" value=4>Agregar Comidas<br>
+                <input type="checkbox" name="eleccion" value=5>Listar los registros de mesas<br>
+                <input type="submit" value="Ingresar Respuesta">
+            </p>            
+        </form>
+    </main>
+</body>
+
+</html>

@@ -6,4 +6,11 @@ public class Clientes
     public int DNI { get; set; }
     public DateTime FechaNacimiento { get; set; }
     public string Email { get; set; }
+    public Clientes(string Nombre, string Apellido, int DNI, DateTime FechaNacimiento, string Email){
+        this.Apellido = Apellido;
+        this.Nombre = Nombre;
+        this.DNI = DNI;
+        this.FechaNacimiento = FechaNacimiento;
+        this.Email = Email;
+    }
 }

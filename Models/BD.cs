@@ -1,15 +1,25 @@
 using Microsoft.Data.SqlClient;
 using Dapper;
 
-public static class Bd
+public static class BD
 {
     private static string _connectionString = @"Server=localhost;DataBase=NombreBase;Integrated Security=True;TrustServerCertificate =True;";
+    public static List<Clientes> LevantarMesas()
+    {
+        List<Clientes> clientes = new List<Clientes>();
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = "SELECT * FROM Mesas";
+            clientes = connection.Query<Clientes>(query).ToList();
+        }
+        return clientes;
+    }
     public static List<Clientes> LevantarClientes()
     {
         List<Clientes> clientes = new List<Clientes>();
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string query = "SELECT * FROM Patentes";
+            string query = "SELECT * FROM Clientes";
             clientes = connection.Query<Clientes>(query).ToList();
         }
         return clientes;
@@ -32,14 +42,12 @@ public static class Bd
         }
         return registrosAfectados;
     }
-    public static List<Clientes> ActualizarMozos() //Falta hacerlo. Totalmente incompleto
-    {
-        List<Clientes> clientes = new List<Clientes>();
-        using (SqlConnection connection = new SqlConnection(_connectionString))
-        {
-            string query = "SELECT * FROM Patentes";
-            clientes = connection.Query<Clientes>(query).ToList();
-        }
-        return clientes;
-    }
+    //public static void ActualizarMozos()
+    //{
+        //using (SqlConnection connection = new SqlConnection(_connectionString))
+        //{
+            //string query = "update Mozos set Apellido = 'Pérez' where id in (Select idMozo from RegistroMesas where IdMesa = 5)";
+            //connection.Query<Clientes>(query).ToList();
+        //} 
+    //}
 }

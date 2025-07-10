@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bGhHfvYE3DsdMO76hD1JjED7KG2xf3sdAj7kBy/tl3ddy61XpQ/YRuE9WLWr+43RZCwzi10sGrpfa6C+FcMPEg==",
+  "dgSpecHash": "Lhdw84xhcjcRWiOTjKI4i3Po1hjAHIWKw4f4LUJlCbOV1re8N8AINShGMvKM0D1WJxgAoqcyRFFJ6R5JFnnECA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\49091683\\Downloads\\Nueva carpeta\\TP03\\TP03.csproj",
+  "projectFilePath": "C:\\Users\\49091683\\Downloads\\Conexi-n-a-SQL-Server\\TP03.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\49091683\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\49091683\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

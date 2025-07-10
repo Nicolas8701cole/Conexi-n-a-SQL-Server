@@ -32,4 +32,14 @@ public static class Bd
         }
         return registrosAfectados;
     }
+    public static List<Clientes> ActualizarMozos() //Falta hacerlo. Totalmente incompleto
+    {
+        List<Clientes> clientes = new List<Clientes>();
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = "SELECT * FROM Patentes";
+            clientes = connection.Query<Clientes>(query).ToList();
+        }
+        return clientes;
+    }
 }

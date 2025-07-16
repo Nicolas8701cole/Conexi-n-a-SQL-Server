@@ -6,15 +6,15 @@ public static class BD
     
     private static string _connectionString = @"Server=localhost;DataBase=TP07 -ORT Gourmet;Integrated Security=True;TrustServerCertificate=True;";
     
-        public static List<Clientes> LevantarMesas()
+        public static List<Mesas> LevantarMesas()
     {
-        List<Clientes> clientes = new List<Clientes>();
+        List<Mesas> mesas = new List<Mesas>();
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string query = "SELECT * FROM Mesas";
-            clientes = connection.Query<Clientes>(query).ToList();
+            mesas = connection.Query<Mesas>(query).ToList();
         }
-        return clientes;
+        return mesas;
     }
     public static List<Clientes> LevantarClientes()
     {

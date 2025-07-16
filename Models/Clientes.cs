@@ -13,4 +13,9 @@ public class Clientes
         this.FechaNacimiento = FechaNacimiento;
         this.Email = Email;
     }
+
+    public Clientes ()
+    {
+        
+    }
 }

@@ -21,12 +21,13 @@ public class HomeController : Controller
     {
         if (eleccion == 1)
         {
-            BD.LevantarClientes();
+            ViewBag.dato = BD.LevantarClientes();
             return View("LevantarClientes");
         }
         else if (eleccion == 2)
         {
             BD.EliminarClientes();
+            ViewBag.dato = BD.LevantarClientes();
             return View("EliminarClientes");
         }
         else if (eleccion == 3)
@@ -39,7 +40,7 @@ public class HomeController : Controller
         }
         else if (eleccion == 5)
         {
-            BD.LevantarMesas();
+            ViewBag.dato = BD.LevantarMesas();
             return View("LevantarMesas");
         }
         else

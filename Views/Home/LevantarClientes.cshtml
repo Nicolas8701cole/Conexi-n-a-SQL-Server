@@ -4,13 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuarto papyrus te habla</title>
+    <title></title>
 </head>
 
 <body>
 
     <main>
+        <h2>Listado de Clientes:</h2>
+         @foreach (Clientes cliente in ViewBag.dato)
+            {
+                <div> 
+                    <h2>@cliente.Nombre </h2>
+                </div>
+            }
     </main>
+
 </body>
 
 </html>

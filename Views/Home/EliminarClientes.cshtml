@@ -10,7 +10,13 @@
 <body>
 
     <main>
-
+        <h2>Listado de Sobreviviente:</h2>
+         @foreach (Clientes cliente in ViewBag.dato)
+            {
+                <div> 
+                    <h2>@cliente.Nombre </h2>
+                </div>
+            }
     </main>
 
 </body>

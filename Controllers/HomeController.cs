@@ -32,7 +32,8 @@ public class HomeController : Controller
         }
         else if (eleccion == 3)
         {
-            return View("Index");
+            BD.ActualizarMozos();
+            return View("ActualizarMozos");
         }
         else if (eleccion == 4)
         {

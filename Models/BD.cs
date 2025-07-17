@@ -28,7 +28,7 @@ public static class BD
     }
     public static void AgregarComidas(Comidas comida)
     {
-        string query = "INSERT INTO Jugadores (IdEquipo, Nombre, Fecha Nacimiento) VALUES (@Nombre, @IdTipoComida, @Precio, @SinGluten)";
+        string query = "INSERT INTO Comidas (Nombre, IdTipoComida, Precio, SinGluten) VALUES (@Nombre, @IdTipoComida, @Precio, @SinGluten)";
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             connection.Execute(query, new { Nombre = comida.Nombre, IdTipoComida = comida.IdTipoComida, Precio = comida.Precio, SinGluten = comida.SinGluten });
@@ -44,12 +44,12 @@ public static class BD
         }
         return registrosAfectados;
     }
-    //public static void ActualizarMozos()
-    //{
-        //using (SqlConnection connection = new SqlConnection(_connectionString))
-        //{
-            //string query = "update Mozos set Apellido = 'Pérez' where id in (Select idMozo from RegistroMesas where IdMesa = 5)";
-            //connection.Query<Clientes>(query).ToList();
-        //} 
-    //}
+    public static void ActualizarMozos()
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = "update Mozos set Apellido = 'Pérez' where id in (Select idMozo from RegistroMesas where IdMesa = 5)";
+            connection.Query<Clientes>(query).ToList();
+        } 
+    }
 }

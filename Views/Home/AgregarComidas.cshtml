@@ -10,7 +10,25 @@
 <body>
 
     <main>
-
+        <form asp-controller="Home" asp-action="AgregarComida" method="post" autocomplete="false" tabindex="-1">
+            <h3> Opciones de añadir</h3><p><br><!--Radio button-->
+                Escribe el nombre. <input type="text" name="Nombre"><br>
+                Selecciona un tipo un tipo de comida. <select name = "IdTipoComida">
+                    <option value=1>Entrada</option>
+                    <option value=2>Plato Principal</option>
+                    <option value=3>Postre</option>
+                    <option value=4>Bebida</option>
+                    <option value=9>Guarnición</option>
+                    <option value=10>Vegetariano</option>
+                </select><br>
+                Elige su precio. <input type="number" name="Precio"><br>
+                <select name = "SinGluten">
+                    <option value=1>Con Gluten</option>
+                    <option value=2>Sin Gluten</option>
+                </select><br>
+                <input type="submit" value="Ingresar Respuesta">
+            </p>            
+        </form>
     </main>
 
 </body>
